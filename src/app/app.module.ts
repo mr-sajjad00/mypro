@@ -13,14 +13,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabase} from 'angularfire2/database';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
-export const firebaseConfig = {
+const firebase = {
   apiKey: "AIzaSyBGibwB3VOc8XtEMo-Urd0BiAvKaE1yO4g",
-    authDomain: "mytest-b9856.firebaseapp.com",
-    databaseURL: "https://mytest-b9856.firebaseio.com",
-    projectId: "mytest-b9856",
-    storageBucket: "mytest-b9856.appspot.com",
-    messagingSenderId: "644849580478"
-};
+  authDomain: "mytest-b9856.firebaseapp.com",
+  databaseURL: "https://mytest-b9856.firebaseio.com",
+  projectId: "mytest-b9856",
+  storageBucket: "mytest-b9856.appspot.com",
+  messagingSenderId: "644849580478"
+}
 
 @NgModule({
   declarations: [
@@ -32,7 +32,7 @@ export const firebaseConfig = {
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp),AngularFireModule.initializeApp(firebaseConfig),
+    IonicModule.forRoot(MyApp),AngularFireModule.initializeApp(firebase),
     AngularFireDatabaseModule
   ],
   bootstrap: [IonicApp],
